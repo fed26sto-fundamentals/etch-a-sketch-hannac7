@@ -1,20 +1,31 @@
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
 }
 
-#grid-container {
-    display: grid;
-    grid-template-columns: repeat(16, 30px);
-    grid-template-rows: repeat(16, 30px);
-    gap: 2px;
+#regenerateButton {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-.grid-item {
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    width: 30px;
-    height: 30px;
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 960px; 
+    height: 960px; 
+}
+
+.grid-square {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s;
+}
+
+.grid-square.hovered {
+    background-color: #000;
 }
